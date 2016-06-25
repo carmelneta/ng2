@@ -37,17 +37,6 @@ barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
 
-
-// put the names of any of your Material components here
-const materialPkgs:string[] = [
-  'core',
-  'button'
-];
-
-materialPkgs.forEach((pkg) => {
-  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
-});
-
 /** Type declaration for ambient System. */
 declare var System: any;
 
@@ -56,7 +45,6 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    '@angular2-material': 'vendor/@angular2-material',
     'main': 'main.js'
   },
   packages: cliSystemConfigPackages
