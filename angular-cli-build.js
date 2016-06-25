@@ -4,6 +4,7 @@ var Angular2App = require('angular-cli/lib/broccoli/angular2-app');
 
 module.exports = function(defaults) {
   return new Angular2App(defaults, {
+    sassCompiler: true,
     vendorNpmFiles: [
       'systemjs/dist/system-polyfills.js',
       'systemjs/dist/system.src.js',
@@ -11,7 +12,8 @@ module.exports = function(defaults) {
       'es6-shim/es6-shim.js',
       'reflect-metadata/*.js',
       'rxjs/**/*.js',
-      '@angular/**/*.js'
+      '@angular/**/*.js',
+      '@angular2-material/**/*.js'
     ]
   });
 };
